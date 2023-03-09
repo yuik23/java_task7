@@ -11,25 +11,26 @@ public class ProfileCreateForm {
   private String name;
 
   @NotBlank(message = "NULL、空文字もしくは空白です。")
-  public String getDataOfBirth() {
-    return dataOfBirth;
-  }
-
-  public void setDataOfBirth(String dataOfBirth) {
-    this.dataOfBirth = dataOfBirth;
-  }
-
   private String dataOfBirth;
 
+  public ProfileCreateForm(String name, String dataOfBirth) {
+    this.name = name;
+    this.dataOfBirth = dataOfBirth;
+  }
 
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public String getDataOfBirth() {
+    return dataOfBirth;
+  }
 
+  public void setName(String name) {
     this.name = name;
   }
 
-
+  public void setDataOfBirth(String dataOfBirth) {
+    this.dataOfBirth = dataOfBirth;
+  }
 }
